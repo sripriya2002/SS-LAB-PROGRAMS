@@ -1,19 +1,17 @@
 %{
 	#include<stdio.h>
 	int count=0;
-	
 %}
 %%
-ab* {count++;} {printf("entered Pattern is %s",yytext);}
-
+(ab)* {count++;}{printf("entered pattern is %s",yytext);}
 %%
-int main()
+void main()
 {
-printf("enter the sentence\n");
+printf("enter the pattern\n");
 yylex();
-if(count==1)
+printf("count is %d",count);
+if(count>0)
 	printf("pattern is matched\n");
-	else
+else
 	printf("pattern is not matched\n");
-return 0;	
 }
