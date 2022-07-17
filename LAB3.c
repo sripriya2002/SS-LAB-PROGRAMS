@@ -44,7 +44,7 @@ void main()
 	printf("\nStack input");
 	printf("\n_______________________________________________________________________________\n");
 	while(1){
-		if(stack[i]=stack[j])
+		if(stack[i]=s[j])
 		{
 			i--;
 			j++;
